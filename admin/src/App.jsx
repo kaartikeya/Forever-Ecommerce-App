@@ -9,7 +9,7 @@ import Login from "./components/Login";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const backendUrl = "https://forever-ecommerce-website-e4dc.onrender.com";
+export const backendUrl = "https://ecommerce-backend-six-psi.vercel.app";
 export const currency = "$";
 
 const App = () => {
