@@ -19,10 +19,11 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://forever-ecommerce-frontend.onrender.com/",
-      "https://forever-ecommerce-admin.onrender.com/",
+      "https://forever-ecommerce-frontend.onrender.com",
+      "https://forever-ecommerce-admin.onrender.com",
     ],
     methods: "*",
+    credentials: true,
   })
 );
 
@@ -32,7 +33,9 @@ app.use("/api/product", productRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
-app.get("/", (req, res) => {});
+app.get("/", (req, res) => {
+  res.send("Server is up and running");
+});
 
 // start the express server
 app.listen(port, () => {
