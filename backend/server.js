@@ -16,7 +16,15 @@ connectCloudinary();
 
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://forever-ecommerce-frontend.onrender.com/",
+      "https://forever-ecommerce-admin.onrender.com/",
+    ],
+    methods: "*",
+  })
+);
 
 //api endpoints
 app.use("/api/user", userRouter);
